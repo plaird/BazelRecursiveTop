@@ -1,18 +1,18 @@
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-def load_bazel_upstream_repos():
+def load_bazel_recursive_top_repos():
   git_repository(
-      name = "BazelDownstream",
+      name = "BazelRecursiveMiddle",
       branch = "master",
-      remote = "https://github.com/plaird/BazelDownstream",
+      remote = "https://github.com/plaird/BazelRecursiveMiddle",
   )
 
   # WORKAROUND: this is where the workaround lives
-  # ideally, a a transitive of BazelDownstream this would be pulled in automatically
+  # ideally, a a transitive of BazelRecursiveMiddle this would be pulled in automatically
   # but until Issue 1943 is addressed we have to manually depend on the transitive closure
   # of downstream workspaces
   git_repository(
-     name = "BazelDownstreamLeaf",
+     name = "BazelRecursiveBottom",
      branch = "master",
-     remote = "https://github.com/plaird/BazelDownstreamLeaf",
+     remote = "https://github.com/plaird/BazelRecursiveBottom",
   )

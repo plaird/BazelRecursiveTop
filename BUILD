@@ -1,9 +1,9 @@
-load("//:upstream.bzl", "upstream_helloworld")
+load("//:recursive_top.bzl", "recursive_top_helloworld")
 
 exports_files([
-    "upstream_rule.sh",
+    "recursive_top_rule.sh",
 ])
 
-upstream_helloworld(
-    name = "upstream_instance",
+recursive_top_helloworld(
+    name = "recursive_top_instance",
 )
