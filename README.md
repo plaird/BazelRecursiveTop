@@ -1,4 +1,4 @@
-# BazelDownstreamLeaf: Hierarchical Transitive Workspace Dependencies
+# BazelRecursiveTop: Hierarchical Transitive Workspace Dependencies
 
 One of a set of Bazel workspaces that shows a hierarchical dependency pattern of GitHub hosted Bazel workspaces.
 
