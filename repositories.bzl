@@ -4,7 +4,7 @@ load("@BazelRecursiveTop//:repositories_transitives.bzl", "load_bazel_recursive_
 def load_bazel_recursive_top_repos():
   git_repository(
       name = "BazelRecursiveMiddle",
-      branch = "master",
+      branch = "git_repo",
       remote = "https://github.com/plaird/BazelRecursiveMiddle",
   )
   load_bazel_recursive_top_transitive_repos()
